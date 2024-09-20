@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omakase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/build/styles.css" />
+  </head>
+  <body class="font-body bg-black">
+    <!-- omakase -->
+    <nav
+      id="sushi-header"
+      class="navbar py-0 fixed-top phoneLg:px-[10px] phablet:px-[40px] desktop:px-[80px] w-full top-0 left-0 z-30"
+    >
+      <div class="container-fluid max-w-[1310px] px-[15px] mx-auto">
+        <div
+          class="border-b border-solid border-white-brand/[0.4] py-[18px] tablet:py-[24px] flex items-center w-full"
+        >
+          <nav class="flex-grow gap-[7%] items-center tablet:flex hidden">
+            <a href="#sushi-about" class="sushi-link uppercase">About</a>
+            <a href="#sushi-menu" class="sushi-link uppercase">Menu</a>
+            <a href="#sushi-contact" class="sushi-link uppercase">Contact</a>
+          </nav>
+          <div class="flex-grow flex tablet:justify-center">
+            <a href="#">
+              <img
+                src="../../images/logo-sushi.svg"
+                alt="sushi logo"
+                class="max-w-[70px] w-full"
+              />
+            </a>
+          </div>
+
+          <div
+            class="flex-grow flex justify-end gap-[5px] tablet:gap-[5%] items-center"
+          >
+            <a href="tel:+23 344 434" class="sushi-link hidden tablet:block"
+              >+23 344 434</a
+            >
+            <a
+              href="tel:+23 344 434"
+              class="hover:cursor-pointer hover:bg-white-brand/[0.3] w-[42px] h-[42px] bg-white-brand/[0.1] items-center justify-center flex tablet:hidden"
+            >
+              <img
+                src="../../images/icon-phone.svg"
+                alt="phone icon"
+                class="w-[24px] h-[24px]"
+              />
+            </a>
+            <a
+              href="#sushi-contact"
+              class="text-white-brand text-link font-body py-[14px] px-[14px] phablet:py-[18px] phablet:px-[24px] rounded-none bg-white-brand/[0.1] hover:bg-primary-brand hover:border-primary-brand uppercase hover:text-white-brand"
+              >Book a table</a
+            >
+            <div class="block tablet:hidden">
+              <button
+                class="navbar-toggler rounded-0 outline-none hover:cursor-pointer hover:bg-white-brand/[0.3] w-[42px] h-[42px] bg-white-brand/[0.1] items-center justify-center flex"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <img
+                  src="../../images/icon-hamburger-menu.svg"
+                  alt="phone icon"
+                  class="min-w-[24px] w-[24px] h-[24px]"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="offcanvas offcanvas-end min-h-screen bg-[#d2d2d2]"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="block" href="#">
+                  <img
+                    src="../../images/logo-dark.svg"
+                    alt="sushi logo"
+                    class="max-w-[70px] w-full"
+                  />
+                </a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="py-[10px]">
+                  <a
+                    class="sushi-link sushi-link--dark uppercase text-black-brand font-medium font-body no-underline hover:text-primary-brand"
+                    aria-current="page"
+                    href="#sushi-about"
+                    >About</a
+                  >
+                </li>
+                <li class="py-[10px]">
+                  <a
+                    class="sushi-link sushi-link--dark uppercase text-black-brand font-medium font-body no-underline hover:text-primary-brand"
+                    href="#sushi-menu"
+                    >Menu</a
+                  >
+                </li>
+                <li class="py-[10px]">
+                  <a
+                    class="sushi-link sushi-link--dark uppercase hover:text-primary-brand text-black-brand font-medium font-body no-underline"
+                    href="#sushi-contact"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero-banner -->
+    <section
+      class="relative before:content-normal before:absolute before:w-full before:h-full before:inset-0 before:bg-[url('../images/banner-hero.png')] before:bg-cover before:bg-top before:bg-no-repeat"
+    >
+      <div class="phoneLg:px-[15px] tablet:px-[40px] desktop:px-[80px]">
+        <div class="sushi-container sushi-container--lg">
+          <div
+            class="flex flex-col w-full justify-center items-center pt-[260px] pb-[40px]"
+          >
+            <div class="flex flex-col justify-center items-center">
+              <div class="max-w-[662px] w-full absolute top-[156px]">
+                <img
+                  class="w-full mix-blend-color-burn"
+                  src="../images/banner-image.svg"
+                  alt="banner center image"
+                />
+              </div>
+              <div class="flex items-center flex-col relative z-20">
+                <div class="flex flex-col gap-[12px] tablet:gap-0">
+                  <span
+                    class="block text-[28px] leading-[100%] tablet:text-captionBanner text-primary-brand text-center uppercase"
+                    >Authentic Sushi</span
+                  >
+                  <h2
+                    class="text-[110px] phoneLg:text-[120px] leading-[82%] tablet:text-headingDisplay font-normal text-center font-heading uppercase text-white"
+                  >
+                    Omakase
+                  </h2>
+                </div>
+                <p
+                  class="max-w-[586px] w-full text-center text-body-medium uppercase text-white-brand mt-[28px] drop-shadow-textShd"
+                >
+                  Experience the finest sushi crafted by our expert chefs, with
+                  every piece tailored to your taste. +23 344 434
+                </p>
+                <div class="flex gap-[15px] mt-[34px]">
+                  <a class="btn btn-primary-red" href="#sushi-contact"
+                    >Book a table</a
+                  >
+                  <a class="btn btn-transparent" href="#sushi-menulist"
+                    >View Menu</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center mt-[50px] phablet:mt-[90px] gap-[28px] opacity-[0.9]"
+            >
+              <div class="w-[100px] h-[100px] flex items-center justify-center">
+                <img
+                  src="../images/logo-award-best50.svg"
+                  class="brightness-0 invert"
+                  alt="logo-award-best50"
+                />
+              </div>
+              <div class="w-[100px] h-[100px] flex items-center justify-center">
+                <img
+                  src="../images/logo-award-michelin-star.svg"
+                  class="brightness-0 invert"
+                  alt="logo-award-michelin-star"
+                />
+              </div>
+              <div class="w-[100px] h-[100px] flex items-center justify-center">
+                <img
+                  src="../images/logo-award-james-beard.svg"
+                  class="brightness-0 invert"
+                  alt="logo-award-james-beard"
+                />
+              </div>
+            </div>
+            <div class="phablet:absolute left-0 bottom-0">
+              <div
+                class="flex phablet:flex-col relative -left-[13px] items-center gap-[16px] pt-[40px] phablet:pt-0 phablet:pb-[60px] before:absolute before:content-none phablet:before:content-[''] before:top-auto before:h-[271px] before:w-[1px] before:bg-white-brand/[0.2] before:bottom-[105%]"
+              >
+                <a
+                  class="hover:cursor-pointer hover:bg-white-brand/[0.3] w-[56px] h-[56px] bg-white-brand/[0.1] flex items-center justify-center"
+                >
+                  <img
+                    src="../images/icon-facebook.svg"
+                    class="w-[24px] h-[24px]"
+                    alt="icon-facebook"
+                  />
+                </a>
+                <a
+                  class="hover:cursor-pointer hover:bg-white-brand/[0.3] w-[56px] h-[56px] bg-white-brand/[0.1] flex items-center justify-center"
+                >
+                  <img
+                    src="../images/icon-instagram.svg"
+                    class="w-[24px] h-[24px]"
+                    alt="icon-instagram"
+                  />
+                </a>
+                <a
+                  class="hover:cursor-pointer hover:bg-white-brand/[0.3] w-[56px] h-[56px] bg-white-brand/[0.1] flex items-center justify-center"
+                >
+                  <img
+                    src="../images/icon-twitter.svg"
+                    class="w-[24px] h-[24px]"
+                    alt="icon-twitter"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- menu-window -->
+    <section
+      class="py-[62px] tablet:py-[80px] phablet:py-[120px]"
+      id="sushi-menu"
+    >
+      <div
+        class="flex flex-col gap-[64px] phoneLg:px-[10px] tablet:px-[40px] desktop:px-[80px]"
+      >
+        <div class="sushi-section-title">
+          <div class="py-[24px] phablet:py-[30px]">
+            <span
+              class="block text-bodyLg-reg text-center text-primary-brand uppercase mb-[16px]"
+              >Our menu</span
+            >
+            <h4
+              class="text-headingSection text-center uppercase text-white-brand font-heading"
+            >
+              Explore
+              <span class="text-white-brand/[0.6]">Our menu</span>
+            </h4>
+          </div>
+        </div>
+        <div class="sushi-container">
+          <div class="grid grid-cols-12 gap-[24px]">
+            <div
+              class="grid col-span-12 phoneLg:col-span-6 phablet:col-span-4 relative min-h-[360px] tablet:min-h-[400px] phablet:min-h-[500px] desktop:min-h-[600px] p-[15px] bg-gray-100"
+            >
+              <div
+                class="h-full relative sushi-common-pseudo before:bg-whiteGrad before:opacity-[0.2] p-[1px]"
+              >
+                <div class="bg-gray-100 w-full h-full relative"></div>
+              </div>
+
+              <div
+                class="p-[32px] pt-[168px] sushi-common-pseudo before:bg-blackGrad absolute bottom-0 w-full left-0 z-20"
+              >
+                <h4
+                  class="text-headingCard-lg text-white-brand font-body font-normal relative z-20"
+                >
+                  Beverage
+                </h4>
+              </div>
+            </div>
+            <div
+              class="grid col-span-12 phoneLg:col-span-6 phablet:col-span-4 relative min-h-[360px] tablet:min-h-[400px] phablet:min-h-[500px] desktop:min-h-[600px] p-[15px] bg-gray-100"
+            >
+              <div
+                class="h-full relative sushi-common-pseudo before:bg-whiteGrad before:opacity-[0.2] p-[1px]"
+              >
+                <div class="bg-gray-100 w-full h-full relative"></div>
+              </div>
+
+              <div
+                class="p-[32px] pt-[168px] sushi-common-pseudo before:bg-blackGrad absolute bottom-0 w-full left-0 z-20"
+              >
+                <h4
+                  class="text-headingCard-lg text-white-brand font-body font-normal relative z-20"
+                >
+                  Food
+                </h4>
+              </div>
+            </div>
+            <div
+              class="grid col-span-12 phoneLg:col-span-6 phablet:col-span-4 relative min-h-[360px] tablet:min-h-[400px] phablet:min-h-[500px] desktop:min-h-[600px] p-[15px] bg-gray-100"
+            >
+              <div
+                class="h-full relative sushi-common-pseudo before:bg-whiteGrad before:opacity-[0.2] p-[1px]"
+              >
+                <div class="bg-gray-100 w-full h-full relative"></div>
+              </div>
+
+              <div
+                class="p-[32px] pt-[168px] sushi-common-pseudo before:bg-blackGrad absolute bottom-0 w-full left-0 z-20"
+              >
+                <h4
+                  class="text-headingCard-lg text-white-brand font-body font-normal relative z-20"
+                >
+                  Deserts
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-[62px] tablet:py-[80px] phablet:py-[120px] px-[15px] desktop:px-[60px]"
+    >
+      <div class="w-full">
+        <div class="py-[80px] flex flex-col gap-[64px] bg-black-100">
+          <div class="sushi-section-title">
+            <div class="py-[24px] phablet:py-[30px]">
+              <span
+                class="block text-bodyLg-reg text-center text-primary-brand uppercase mb-[16px]"
+                >Our menu</span
+              >
+              <h4
+                class="text-headingSection text-center uppercase text-white-brand font-heading"
+              >
+                Explore
+                <span class="text-white-brand/[0.6]">Our menu</span>
+              </h4>
+            </div>
+          </div>
+          <div
+            class="px-[15px] tablet:px-[40px] desktop:px-[80px] flex justify-center"
+          >
+            <div class="grid grid-cols-12 gap-[8px] max-w-[1160px] mx-auto">
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Uramaki (裏巻き寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Rolled sushi wrapped in seaweed (nori) and sliced into
+                    bite-sized pieces.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Gunkan (軍艦巻き)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    A bowl of vinegared rice topped with various sashimi and
+                    ingredients.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Temaki (手巻き寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Inside-out rolls with rice on the outside and seaweed
+                    inside.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Narezushi (馴れ寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Hand-rolled sushi in a cone shape with seaweed, rice, and
+                    fillings.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Inari Sushi (稲荷寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Thinly sliced raw fish or seafood, served without rice.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Aburi Sushi (炙り寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    A bowl of vinegared rice topped with various sashimi and
+                    ingredients.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Oshi Sushi (押し寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Small, ball-shaped sushi often decorated with colorful
+                    toppings.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Sashimi (刺身)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Fermented sushi, an ancient method of preserving fish with
+                    rice.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Nigiri (握り寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Small, ball-shaped sushi often decorated with colorful
+                    toppings.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Maki (巻き寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Hand-pressed sushi with fish or seafood atop rice.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Temari (手まり寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Inside-out rolls with rice on the outside and seaweed
+                    inside.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="grid col-span-12 phoneLg:col-span-6 tablet:col-span-4 phablet:col-span-4 desktop:col-span-3"
+              >
+                <div class="bg-blackRadialGrad p-[38px] relative h-[254px]">
+                  <div class="bg-gray-100 rounded-24 w-full h-full"></div>
+                </div>
+                <div class="pt-[18px] pb-[16px]">
+                  <span
+                    class="block text-headingCard-sm text-white-brand mb-[8px]"
+                  >
+                    Chirashi (ちらし寿司)
+                  </span>
+                  <p
+                    class="text-body-reg text-white-100 line-clamp-2 opacity-[0.7]"
+                  >
+                    Lightly seared sushi with the top layer of fish torched.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section
+      id="sushi-about"
+      class="py-[62px] tablet:py-[80px] phablet:py-[120px] phoneLg:px-[10px] tablet:px-[40px] desktop:px-[80px] bg-[url('../images/banner-about.png')] bg-no-repeat bg-center bg-cover"
+    >
+      <div class="sushi-container">
+        <div class="grid grid-cols-12">
+          <div class="col-span-12 phablet:col-span-6 grid bg-white-200">
+            <div
+              class="phablet:min-h-max before:block before:pb-[270px] phoneWide:before:pb-[50%] before:content-[''] phablet:content-none h-full"
+            ></div>
+          </div>
+          <div
+            class="col-span-12 phablet:col-span-6 grid p-[20px] tablet:p-[40px] desktop:p-[60px] desktopLg:p-[80px] gap-[32px] desktop:gap-[44px] desktopLg:gap-[64px]"
+          >
+            <div class="sushi-section-title sushi-section-title--simple">
+              <span
+                class="block text-bodyLg-reg text-primary-brand uppercase mb-[16px]"
+                >about the omakase</span
+              >
+              <h4
+                class="text-headingSection uppercase text-white-brand font-heading"
+              >
+                CREATING A
+                <span class="text-white-brand/[0.6]">NEW WORLD OF FLAVORS</span>
+              </h4>
+            </div>
+            <div class="flex flex-col gap-[20px]">
+              <p
+                class="text-body-reg text-white-brand/[0.7] drop-shadow-textShd"
+              >
+                Welcome to Omakase, where the delicate artistry of sushi meets
+                the vibrant flavors of Japan. At Omakase, we are passionate
+                about delivering an authentic and unforgettable dining
+                experience, bringing the essence of traditional Japanese cuisine
+                to every plate.
+              </p>
+              <p
+                class="text-body-reg text-white-brand/[0.7] drop-shadow-textShd"
+              >
+                Our master chefs meticulously craft each piece of sushi using
+                the freshest, highest-quality ingredients sourced locally and
+                globally. From the rich, buttery taste of our sashimi to the
+                perfectly balanced rolls, every bite at Omakase is a testament
+                to our commitment to excellence and authenticity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- list-of-menu -->
+    <section
+      class="py-[62px] tablet:py-[80px] phablet:py-[120px]"
+      id="sushi-menulist"
+    >
+      <div class="sushi-section-title">
+        <div class="py-[24px] phablet:py-[30px]">
+          <span
+            class="block text-bodyLg-reg text-center text-primary-brand uppercase mb-[16px]"
+            >List of</span
+          >
+          <h4
+            class="text-headingSection text-center uppercase text-white-brand font-heading"
+          >
+            Our
+            <span class="text-white-brand/[0.6]">menu</span>
+          </h4>
+        </div>
+      </div>
+      <div
+        class="pt-[64px] tablet:pt-[80px] phablet:pt-[120px] bg-[url('../images/banner-menulist.png')] bg-contain bg-no-repeat"
+      >
+        <div class="phoneLg:px-[10px] tablet:px-[40px] desktop:px-[80px]">
+          <div class="sushi-container">
+            <div
+              class="flex flex-col gap-[40px] tablet:gap-[60px] desktopLg:gap-[80px]"
+            >
+              <div class="grid grid-cols-12">
+                <div class="grid col-span-12 phablet:col-span-4 items-center">
+                  <div
+                    class="relative before:block before:pb-[300px] phoneWide:before:pb-[50%] phablet:before:pb-[500px] before:content-normal before:bg-white-200"
+                  ></div>
+                </div>
+                <div class="grid col-span-12 phablet:col-span-8">
+                  <div
+                    class="grid relative p-[16px] phoneLg:p-[24px] desktopLg:p-[32px] bg-black-100"
+                  >
+                    <div
+                      class="h-full relative sushi-common-pseudo before:bg-whiteGrad before:opacity-[0.2] p-[1px]"
+                    >
+                      <div
+                        class="bg-black-100 w-full h-full relative p-[16px] phoneLg:p-[32px] desktopLg:p-[40px]"
+                      >
+                        <h5
+                          class="text-headingCard-xl text-white-brand font-heading mb-[16px]"
+                        >
+                          Beverage
+                        </h5>
+                        <div
+                          class="grid grid-cols-12 gap-[24px] phablet:gap-[30px] desktopLg:gap-[40px]"
+                        >
+                          <div class="col-span-12 phoneLg:col-span-6">
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Plum Wine (梅酒)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Smooth and refined, often enjoyed neat or on
+                                  the rocks.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $19.75
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Sparkling Wine
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Sweet, fruity wine made from plums, served
+                                  chilled.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $26.05
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Japanese Whiskey
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Japanese rice wine, with varieties like
+                                  Junmai, Ginjo, and Daiginjo.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $34.90
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Green Tea (緑茶)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Traditional Japanese beverage, often served
+                                  warm or cold.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $38.50
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Shochu (焼酎)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Finely ground green tea powder, served as a
+                                  concentrated beverage.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $21.30
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="col-span-12 phoneLg:col-span-6">
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Beer (ビール)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Non-alcoholic option with a spicy kick that
+                                  complements sushi flavors.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $30.80
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  White Wine
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Champagne or Prosecco, providing a refreshing
+                                  contrast.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $26.05
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Matcha (抹茶)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Distilled Japanese spirit, often served on the
+                                  rocks or diluted with water.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $16.50
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Ginger Ale
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Light, crisp beers like Japanese lagers (e.g.,
+                                  Asahi, Sapporo, Kirin).
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $18.60
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-12">
+                <div class="grid col-span-12 phablet:col-span-8">
+                  <div
+                    class="grid relative p-[16px] phoneLg:p-[24px] desktopLg:p-[32px] bg-black-100"
+                  >
+                    <div
+                      class="h-full relative sushi-common-pseudo before:bg-whiteGrad before:opacity-[0.2] p-[1px]"
+                    >
+                      <div
+                        class="bg-black-100 w-full h-full relative p-[16px] phoneLg:p-[32px] desktopLg:p-[40px]"
+                      >
+                        <h5
+                          class="text-headingCard-xl text-white-brand font-heading mb-[16px]"
+                        >
+                          FOOD
+                        </h5>
+                        <div
+                          class="grid grid-cols-12 gap-[24px] phablet:gap-[30px] desktopLg:gap-[40px]"
+                        >
+                          <div class="col-span-12 phoneLg:col-span-6">
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Aburi Sushi (炙り寿司)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  A bowl of vinegared rice topped with various
+                                  sashimi and ingredients.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $34.90
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Chirashi (ちらし寿司)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Lightly seared sushi with the top layer of
+                                  fish torched.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $24.75
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Narezushi (馴れ寿司)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Thinly sliced raw fish or seafood, served
+                                  without rice.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $19.75
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Oshi Sushi (押し寿司)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Sushi wrapped with seaweed, often filled with
+                                  roe or sea urchin.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $15.40
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Temaki (手巻き寿司)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Inside-out rolls with rice on the outside and
+                                  seaweed inside.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $11.55
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="col-span-12 phoneLg:col-span-6">
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Nigiri (握り寿司)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Pressed sushi in a mold with fish and rice,
+                                  cut into pieces.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $22.70
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Maki (巻き寿司)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Hand-rolled sushi in a cone shape with
+                                  seaweed, rice, and fillings.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $12.85
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid col-span-12 phablet:col-span-4 items-center">
+                  <div
+                    class="relative before:block before:pb-[300px] phoneWide:before:pb-[50%] phablet:before:pb-[500px] before:content-normal before:bg-white-200"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-12">
+                <div class="grid col-span-12 phablet:col-span-4 items-center">
+                  <div
+                    class="relative before:block before:pb-[300px] phoneWide:before:pb-[50%] phablet:before:pb-[500px] before:content-normal before:bg-white-200"
+                  ></div>
+                </div>
+                <div class="grid col-span-12 phablet:col-span-8">
+                  <div
+                    class="grid relative p-[16px] phoneLg:p-[24px] desktopLg:p-[32px] bg-black-100"
+                  >
+                    <div
+                      class="h-full relative sushi-common-pseudo before:bg-whiteGrad before:opacity-[0.2] p-[1px]"
+                    >
+                      <div
+                        class="bg-black-100 w-full h-full relative p-[16px] phoneLg:p-[32px] desktopLg:p-[40px]"
+                      >
+                        <h5
+                          class="text-headingCard-xl text-white-brand font-heading mb-[16px]"
+                        >
+                          Desert
+                        </h5>
+                        <div
+                          class="grid grid-cols-12 gap-[24px] phablet:gap-[30px] desktopLg:gap-[40px]"
+                        >
+                          <div class="col-span-12 phoneLg:col-span-6">
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Anmitsu (あんみつ)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Layered pastry with matcha-flavored cream.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $14.90
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Sesame Balls (ごま団子)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Rich and creamy ice cream flavored with green
+                                  tea powder.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $39.60
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Dorayaki (どら焼き)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Fresh seasonal fruits like melon,
+                                  strawberries, or persimmons, often served in
+                                  elegant presentations.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $10.60
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Matcha Ice Cream (抹茶アイスクリーム)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Creamy cheesecake flavored with green tea,
+                                  blending traditional Japanese and Western
+                                  flavors.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $36.15
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Mille-Feuille Matcha Cake
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Traditional Japanese dessert with agar jelly,
+                                  fruits, and red bean paste, often served with
+                                  sweet syrup.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $32.20
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="col-span-12 phoneLg:col-span-6">
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Fruit Platter
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Firm jelly made from red bean paste, agar, and
+                                  sugar, often served in slices.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $27.40
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Taiyaki (鯛焼き)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Fish-shaped pastries filled with sweet
+                                  fillings such as red bean paste, custard, or
+                                  chocolate.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $13.25
+                              </p>
+                            </div>
+
+                            <div
+                              class="py-[24px] border-b border-solid border-white-brand/[0.16] justify-between gap-[20px] tablet:gap-[32px] phablet:gap-[40px] flex flex-col tablet:flex-row"
+                            >
+                              <div
+                                class="flex justify-between flex-col gap-[4px]"
+                              >
+                                <h6
+                                  class="font-body text-bodyXl-reg text-white-brand font-normal"
+                                >
+                                  Yokan (羊羹)
+                                </h6>
+                                <p
+                                  class="text-body-reg text-white-100/[0.5] line-clamp-2"
+                                >
+                                  Fried or baked rice balls coated in sesame
+                                  seeds and filled with sweet paste.
+                                </p>
+                              </div>
+                              <p class="text-body-reg text-white-100/[0.5]">
+                                $18.60
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews -->
+    <section class="py-[62px] tablet:py-[80px] phablet:py-[120px]">
+      <div class="flex flex-col gap-[64px]">
+        <div class="sushi-section-title">
+          <div class="py-[24px] phablet:py-[24px] desktop:py-[30px]">
+            <span
+              class="block text-bodyLg-reg text-center text-primary-brand uppercase mb-[16px]"
+              >Reviews</span
+            >
+            <h4
+              class="text-headingSection text-center uppercase text-white-brand font-heading"
+            >
+              OUR CUSTOMERS
+              <span class="text-white-brand/[0.6]"> Love us</span>
+            </h4>
+          </div>
+        </div>
+
+        <div class="sushi-review regular">
+          <div
+            class="p-[3rem] desktop:p-[80px] gap-[2rem] !flex flex-col h-full bg-black-100"
+          >
+            <div class="relative">
+              <img
+                src="/images/icon-quote.svg"
+                alt="icon-quote"
+                class="max-w-[1.85rem] desktop:max-w-[54px] absolute -top-[13px] -left-[28px] desktop:-top-[28px] desktop:-left-[45px]"
+              />
+              <h5 class="text-headingCard-md text-white font-body">
+                Exceptional Sushi and Service
+              </h5>
+            </div>
+
+            <p class="text-bodyXl-light text-white-brand/[0.7]">
+              "Dining at Omakase was an unforgettable experience. The chefs'
+              expertise shines through in each piece of sushi, from the
+              delicate.
+            </p>
+
+            <div class="flex items-center justify-between flex-wrap gap-[20px]">
+              <div class="flex items-center gap-[1px]">
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+              </div>
+              <span
+                class="inline-block text-bodyXl-reg text-white-brand/[0.45]"
+              >
+                - David S.
+              </span>
+            </div>
+          </div>
+          <div
+            class="p-[3rem] desktop:p-[5rem] gap-[2rem] !flex flex-col h-full bg-black-100"
+          >
+            <div class="relative">
+              <img
+                src="/images/icon-quote.svg"
+                alt="icon-quote"
+                class="max-w-[1.85rem] desktop:max-w-[54px] absolute -top-[13px] -left-[28px] desktop:-top-[28px] desktop:-left-[45px]"
+              />
+              <h5 class="text-headingCard-md text-white font-body">
+                A Truly Authentic Experience
+              </h5>
+            </div>
+
+            <p class="text-bodyXl-light text-white-brand/[0.7]">
+              "Omakase exceeded all my expectations. The attention to detail in
+              every dish was impeccable, and the flavors were simply
+              outstanding.
+            </p>
+
+            <div class="flex items-center justify-between flex-wrap gap-[20px]">
+              <div class="flex items-center gap-[1px]">
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+              </div>
+              <span
+                class="inline-block text-bodyXl-reg text-white-brand/[0.45]"
+              >
+                — Emily R.
+              </span>
+            </div>
+          </div>
+          <div
+            class="p-[3rem] desktop:p-[5rem] gap-[2rem] !flex flex-col h-full bg-black-100"
+          >
+            <div class="relative">
+              <img
+                src="/images/icon-quote.svg"
+                alt="icon-quote"
+                class="max-w-[1.85rem] desktop:max-w-[54px] absolute -top-[13px] -left-[28px] desktop:-top-[28px] desktop:-left-[45px]"
+              />
+              <h5 class="text-headingCard-md text-white font-body">
+                A Truly Authentic Experience
+              </h5>
+            </div>
+
+            <p class="text-bodyXl-light text-white-brand/[0.7]">
+              "Omakase exceeded all my expectations. The attention to detail in
+              every dish was impeccable, and the flavors were simply
+              outstanding.
+            </p>
+
+            <div class="flex items-center justify-between flex-wrap gap-[20px]">
+              <div class="flex items-center gap-[1px]">
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+              </div>
+              <span
+                class="inline-block text-bodyXl-reg text-white-brand/[0.45]"
+              >
+                — Emily R.
+              </span>
+            </div>
+          </div>
+          <div
+            class="p-[3rem] desktop:p-[5rem] gap-[2rem] !flex flex-col h-full bg-black-100"
+          >
+            <div class="relative">
+              <img
+                src="/images/icon-quote.svg"
+                alt="icon-quote"
+                class="max-w-[1.85rem] desktop:max-w-[54px] absolute -top-[13px] -left-[28px] desktop:-top-[28px] desktop:-left-[45px]"
+              />
+              <h5 class="text-headingCard-md text-white font-body">
+                A Truly Authentic Experience
+              </h5>
+            </div>
+
+            <p class="text-bodyXl-light text-white-brand/[0.7]">
+              "Omakase exceeded all my expectations. The attention to detail in
+              every dish was impeccable, and the flavors were simply
+              outstanding.
+            </p>
+
+            <div class="flex items-center justify-between flex-wrap gap-[20px]">
+              <div class="flex items-center gap-[1px]">
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+                <img
+                  src="./images/icon-rating.svg"
+                  class="w-[24px] h-[24px]"
+                  alt="icon-rating"
+                />
+              </div>
+              <span
+                class="inline-block text-bodyXl-reg text-white-brand/[0.45]"
+              >
+                — Emily R.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section
+      id="sushi-contact"
+      class="py-[62px] tablet:py-[80px] phablet:py-[120px] bg-[url('../images/banner-reserve.png')] bg-contain bg-no-repeat bg-center"
+    >
+      <div class="flex flex-col gap-[64px]">
+        <div class="sushi-section-title">
+          <div class="py-[24px] phablet:py-[24px] desktop:py-[30px]">
+            <span
+              class="block text-bodyLg-reg text-center text-primary-brand uppercase mb-[16px]"
+              >Contact Us</span
+            >
+            <h4
+              class="text-headingSection flex items-center justify-center text-center uppercase text-white-brand font-heading"
+            >
+              Reserve now
+            </h4>
+          </div>
+        </div>
+        <div class="phoneLg:px-[10px] tablet:px-[40px] desktop:px-[80px]">
+          <div class="sushi-container">
+            <div class="grid grid-cols-12">
+              <div
+                class="grid col-span-12 phablet:col-span-6 bg-black-100 p-[30px] phablet:p-[40px] desktop:p-[60px] desktopLg:p-[80px]"
+              >
+                <h5
+                  class="text-headingCard-md font-body font-normal text-white"
+                >
+                  Contact Us
+                </h5>
+                <div class="mt-[38px] phablet:mt-[48px]">
+                  <div
+                    class="py-[24px] phablet:py-[30px] border-b border-solid border-white-brand/[0.09]"
+                  >
+                    <span class="block text-bodyXl-reg text-white">Phone</span>
+                    <span class="block text-bodyXl-light text-white-brand/[0.7]"
+                      >+23 344 342</span
+                    >
+                  </div>
+                  <div
+                    class="py-[24px] phablet:py-[30px] border-b border-solid border-white-brand/[0.09]"
+                  >
+                    <span class="block text-bodyXl-reg text-white">Email</span>
+                    <span class="block text-bodyXl-light text-white-brand/[0.7]"
+                      >sushisusantee@mail.com</span
+                    >
+                  </div>
+                  <div
+                    class="py-[24px] phablet:py-[30px] border-b border-solid border-white-brand/[0.09]"
+                  >
+                    <span class="block text-bodyXl-reg text-white"
+                      >Address</span
+                    >
+                    <span class="block text-bodyXl-light text-white-brand/[0.7]"
+                      >44 Blue spring arizona, Djogjakarta, VA 234145</span
+                    >
+                  </div>
+                  <div
+                    class="py-[24px] phablet:py-[30px] border-b border-solid border-white-brand/[0.09]"
+                  >
+                    <span class="block text-bodyXl-reg text-white"
+                      >Opening Hours</span
+                    >
+                    <span class="block text-bodyXl-light text-white-brand/[0.7]"
+                      >Sunday - Saturday 10am - 10pm</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="grid col-span-12 phablet:col-span-6 bg-black-brand p-[30px] phablet:p-[40px] desktop:p-[60px] desktopLg:p-[80px]"
+              >
+                <div class="flex flex-col gap-[32px]">
+                  <h5
+                    class="text-headingCard-md font-body font-normal text-white"
+                  >
+                    Reserve Now
+                  </h5>
+
+                  <div>
+                    <div
+                      class="flex flex-col gap-[1px] py-[16px] px-[8px] border-b border-solid border-white-brand/[0.2]"
+                    >
+                      <label
+                        for="userFirstName"
+                        class="block text-bodyXl-reg text-white-brand"
+                        >First name</label
+                      >
+                      <input
+                        type="text"
+                        class="block bg-transparent placeholder:text-bodyXl-light focus:text-white-brand/[0.8] focus:placeholder:text-white-brand/[0.8] text-bodyXl-light text-white-brand/[0.7] placeholder:text-white-brand/[0.3]"
+                        placeholder="Clark"
+                        id="userFirstName"
+                      />
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-[1px] py-[16px] px-[8px] border-b border-solid border-white-brand/[0.2]"
+                    >
+                      <label
+                        for="userLastName"
+                        class="block text-bodyXl-reg text-white-brand"
+                        >Last name</label
+                      >
+                      <input
+                        type="text"
+                        class="block bg-transparent placeholder:text-bodyXl-light focus:text-white-brand/[0.8] focus:placeholder:text-white-brand/[0.8] text-bodyXl-light text-white-brand/[0.7] placeholder:text-white-brand/[0.3]"
+                        placeholder="Kent"
+                        id="userLastName"
+                      />
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-[1px] py-[16px] px-[8px] border-b border-solid border-white-brand/[0.2]"
+                    >
+                      <label
+                        for="userDataTime"
+                        class="block text-bodyXl-reg text-white-brand"
+                        >Date and Time</label
+                      >
+                      <input
+                        type="datetime"
+                        class="block bg-transparent placeholder:text-bodyXl-light focus:text-white-brand/[0.8] focus:placeholder:text-white-brand/[0.8] text-bodyXl-light text-white-brand/[0.7] placeholder:text-white-brand/[0.3]"
+                        placeholder="12 July 2024 - 14:00"
+                        id="userDataTime"
+                      />
+                    </div>
+
+                    <div
+                      class="flex flex-col gap-[1px] py-[16px] px-[8px] border-b border-solid border-white-brand/[0.2]"
+                    >
+                      <label
+                        for="userNotes"
+                        class="block text-bodyXl-reg text-white-brand"
+                        >Notes</label
+                      >
+                      <textarea
+                        class="block bg-transparent placeholder:text-bodyXl-light focus:text-white-brand/[0.8] text-bodyXl-light text-white-brand/[0.3] resize-none"
+                        rows="3"
+                        id="userNotes"
+                      >
+Enter your messages here</textarea
+                      >
+                    </div>
+                  </div>
+
+                  <div class="flex justify-end">
+                    <button type="submit" class="btn-white">Next</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer
+      class="transition-all ease-in-out phoneLg:px-[10px] tablet:px-[40px] desktop:px-[80px] w-full bg-black-100"
+    >
+      <div class="sushi-container sushi-container--lg">
+        <div
+          class="flex items-center py-[40px] flex-col phablet:flex-row phablet:gap-0 gap-[24px]"
+        >
+          <div
+            class="w-full justify-center phablet:justify-start phablet:flex-grow gap-[28px] flex phablet:flex-row flex-col items-center"
+          >
+            <img
+              src="../../images/logo-sushi.svg"
+              alt="sushi logo"
+              class="max-w-[84px] w-full"
+            />
+            <nav class="flex gap-[7%] items-center">
+              <a href="#sushi-about" class="sushi-link">About</a>
+              <a href="#sushi-menu" class="sushi-link">Menu</a>
+              <a href="#sushi-contact" class="sushi-link">Contact</a>
+            </nav>
+          </div>
+          <div
+            class="w-full justify-center phbalet:flex-grow flex phablet:justify-end gap-[5%] items-center"
+          >
+            <a href="tel:+23 344 434" class="sushi-link">+23 344 434</a>
+            <a href="#sushi-contact" class="btn btn-semiwhite">Book a table</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+      integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      $(document).on("ready", function () {
+        $(".regular").slick({
+          arrows: false,
+          dots: false,
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+          responsive: [
+            {
+              breakpoint: 1440,
+              settings: {
+                arrows: false,
+                centerMode: true,
+
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

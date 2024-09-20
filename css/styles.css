@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@font-face {
+  font-family: "Bebas Kai", sans-serif;
+  src: url("../fonts/BebasKai.ttf");
+}
+html{
+  @apply scroll-smooth;
+  font-size: 16px;
+}
+@media (max-width: 1360px) {
+  html {
+      font-size: 14px;
+  }
+}
+body{
+  font-family:  "Outfit", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6,  p{
+  @apply mb-0;
+}
+
+.parent{
+  font-size: min(3vh,1.7vw);
+}
+.child {
+  font-size: 2.2em;
+}
+
+a, button, input, textarea{
+  @apply transition-all ease-in-out duration-[0.3s] hover:cursor-pointer !font-body outline-0;
+}
+
+.sushi-link, .sushi-nav{
+  @apply text-link text-white-brand p-[5px] hover:text-white-brand/[0.7];
+}
+.sushi-link--dark, .sushi-nav--dark{
+  @apply text-black-brand hover:text-primary-brand
+}
+
+.btn-primary-red{
+  @apply text-white-brand bg-primary-brand text-link py-[18px] font-body px-[24px] border border-solid border-primary-brand hover:bg-primary-brand/[0.8] uppercase;
+}
+.btn-secondary{
+  @apply border-solid border-transparent font-body text-white-brand py-[18px] px-[24px] hover:border-white-brand uppercase;
+}
+.btn-transparent{
+  @apply text-white-brand bg-transparent font-body border-transparent uppercase text-link py-[18px] px-[24px] border border-solid hover:border-white-brand;
+}
+.btn-white{
+  @apply text-black-brand bg-white-brand font-body border-transparent uppercase text-link py-[18px] px-[24px] border border-solid hover:border-white-brand hover:opacity-[0.85];
+}
+.btn-semiwhite{
+  @apply text-white-brand text-link font-body py-[18px] px-[24px] border border-solid border-transparent bg-white-brand/[0.1] hover:bg-primary-brand hover:border-primary-brand uppercase hover:text-white-brand;
+}
+.btn{
+  @apply transition-all ease-in-out duration-[0.3s] py-[14px] px-[20px] phablet:py-[18px] phablet:px-[24px] rounded-none; 
+}
+
+.sushi-container{
+  @apply relative w-full mx-auto px-[15px] max-w-[1230px];
+}
+.sushi-container--lg{
+  @apply max-w-[1310px];
+}
+.sushi-container--xl{
+  @apply max-w-[1350px];
+}
+.sushi-section-title{
+  @apply relative;
+}
+.sushi-section-title::before{
+  @apply absolute content-[""] w-[48%] h-[1px] left-0 -top-[12px] bg-white-brand/[0.5];
+}
+.sushi-section-title::after{
+  @apply absolute content-[""] w-[48%] h-[1px] right-0 -bottom-[12px] bg-white-brand/[0.5];
+}
+@media only screen and (min-width:992px){
+  .sushi-section-title::before{
+    @apply -top-[22px];
+  }
+  .sushi-section-title::after{
+    @apply -bottom-[22px];
+  }
+}
+.sushi-section-title--simple{
+  @apply py-0;
+}
+.sushi-section-title--simple::before, .sushi-section-title--simple::after{
+  @apply content-none;
+}
+
+.sushi-common-pseudo::before{
+  @apply content-[""] absolute inset-0 w-full h-full;
+}
+
+.sushi-header--scroll{
+  @apply bg-[#2a2a2a]/[0.96] backdrop-blur-[6px];
+}
+
+.sushi-header--scroll .sushi-header-in{
+  @apply border-transparent;
+}
+
+/* .slick-slide {
+  display: flex;
+}
+.slick-list {
+  display: flex !important;
+}
+.slide {
+  flex: 0 0 auto;
+  height: 100%;
+} */
+ .sushi-review .slick-track{
+  @apply gap-[1rem] tablet:gap-[2rem];
+ }
+.slick-track {
+  display: flex !important;
+}
+.slick-track .slick-slide {
+  display: flex !important;
+  height: auto;
+  transition: all 0.4s ease-in-out;
+  @apply opacity-[0.6];
+}
+.slick-track .slick-current{
+  @apply opacity-[1];
+}
+
+.slick-slide > div{
+  width: 100%;
+}
