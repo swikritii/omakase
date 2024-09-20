@@ -7,4 +7,4 @@ npm run build
 # Install node_modules for execution
 npm install
 
-Note: For project based on Laravel or PHP language use styles.css stylesheet place under buld folder for integration
+Note: For project based on Laravel or PHP language use styles.css stylesheet place under build folder for integration
